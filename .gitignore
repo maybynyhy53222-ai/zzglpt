@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.~*.docx
+
+.superpowers/**/state/
+*.pid
+
+tmp/
+
+site/data/*.bak

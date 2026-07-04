@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>知行知识库 · 知识管理平台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="知行知识库首页">
+          <span class="brand-mark">知</span>
+          <span class="brand-text">知行知识库</span>
+        </a>
+        <nav class="nav-links" aria-label="主导航">
+          <a href="#top">首页</a>
+          <a href="#industry-education">产教融合</a>
+          <a href="#digital-transformation">数字化转型</a>
+          <a href="#sources">来源</a>
+          <a href="#workbench">检索</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="hero-copy">
+            <p class="eyebrow">Knowledge Intelligence</p>
+            <h1 id="heroTitle">把行业观察整理成可检索、可复用的知识资产</h1>
+            <p id="platformDescription" class="hero-lede"></p>
+            <div class="hero-actions" aria-label="主要操作">
+              <a class="primary-link" href="#workbench">进入检索</a>
+              <a class="ghost-link" href="#sectionCards">查看板块</a>
+            </div>
+            <div class="hero-stats" aria-label="平台统计">
+              <div><strong id="totalCount">0</strong><span>条内容</span></div>
+              <div><strong id="sectionCount">2</strong><span>个板块</span></div>
+              <div><strong id="sourceCount">2</strong><span>个来源</span></div>
+            </div>
+          </div>
+          <div id="sectionCards" class="section-cards" aria-label="知识板块"></div>
+        </section>
+
+        <section id="workbench" class="workbench" aria-labelledby="workbenchTitle">
+          <div class="workbench-head">
+            <div>
+              <p class="eyebrow">Workbench</p>
+              <h2 id="workbenchTitle">内容检索与精读</h2>
+            </div>
+            <p id="generatedAt" class="generated"></p>
+          </div>
+
+          <div class="workbench-layout">
+            <aside class="filters" aria-label="筛选条件">
+              <div class="filter-block">
+                <h3>板块</h3>
+                <div id="sectionFilters" class="filter-list"></div>
+              </div>
+              <div id="sources" class="filter-block">
+                <h3>来源</h3>
+                <div id="sourceFilters" class="filter-list"></div>
+              </div>
+              <p id="sourceNote" class="source-note"></p>
+            </aside>
+
+            <section class="content-panel" aria-label="内容列表">
+              <div class="search-row">
+                <label class="sr-only" for="searchInput">搜索内容</label>
+                <input id="searchInput" type="search" placeholder="搜索标题、摘要、标签、来源、精读正文" />
+                <button id="clearFilters" class="secondary-button" type="button">重置</button>
+              </div>
+              <div id="activeSummary" class="active-summary"></div>
+              <div id="articleGrid" class="article-grid" aria-live="polite"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="reader" class="reader" aria-hidden="true">
+      <div class="reader-backdrop" data-close></div>
+      <article class="reader-panel" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+        <button class="icon-button" type="button" data-close aria-label="关闭">×</button>
+        <p id="readerKicker" class="eyebrow"></p>
+        <h2 id="readerTitle"></h2>
+        <p id="readerMeta" class="reader-meta"></p>
+        <section class="reader-section">
+          <h3>摘要</h3>
+          <p id="readerSummary"></p>
+        </section>
+        <section class="reader-section">
+          <h3>精读内容</h3>
+          <div id="readerBody" class="reader-body"></div>
+        </section>
+        <p id="readerNote" class="reader-note"></p>
+        <a id="readerLink" class="source-link" target="_blank" rel="noreferrer">打开来源</a>
+      </article>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

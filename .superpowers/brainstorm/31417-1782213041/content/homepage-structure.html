@@ -1,0 +1,67 @@
+<h2>门户 + 工作台：首页结构草图</h2>
+<p class="subtitle">这版把“现代网站格局”放在上半屏，把“知识检索与阅读”接在下半屏。首发只做两个板块，但结构预留扩展。</p>
+
+<div class="mockup">
+  <div class="mockup-header">推荐方案：战略门户首屏 + 内容工作台</div>
+  <div class="mockup-body" style="display:grid;gap:16px">
+    <div class="mock-nav" style="display:flex;justify-content:space-between;align-items:center">
+      <strong>知行知识库</strong>
+      <span>首页　产教融合　数字化转型　来源　检索</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:16px;min-height:250px">
+      <div class="placeholder" style="display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;background:#14202a;color:#fff">
+        <span class="label" style="color:#94d4c0">Knowledge Intelligence</span>
+        <h3 style="margin:6px 0;color:#fff;font-size:30px">把行业观察整理成可检索、可复用的知识资产</h3>
+        <p style="max-width:460px;color:#dce8e4">围绕职业教育与数字化转型，沉淀来源、观点、案例、清单与精读笔记。</p>
+      </div>
+
+      <div style="display:grid;gap:12px">
+        <div class="placeholder" style="background:#eef6f2">
+          <span class="label">板块 01</span>
+          <h3>产教融合</h3>
+          <p>平哥聊职教 · 职教趋势 · 校企合作</p>
+        </div>
+        <div class="placeholder" style="background:#eef3f8">
+          <span class="label">板块 02</span>
+          <h3>数字化转型</h3>
+          <p>数字周参 · 教育信息化 · 产业观察</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:260px 1fr;gap:16px">
+      <div class="mock-sidebar">
+        <div class="label">筛选与来源</div>
+        <div style="margin-top:10px;padding:10px;background:#17202a;color:#fff;border-radius:6px">全部内容</div>
+        <div style="margin-top:8px;padding:10px;background:#eef6f2;border-radius:6px">平哥聊职教 → 产教融合</div>
+        <div style="margin-top:8px;padding:10px;background:#eef3f8;border-radius:6px">数字周参 → 数字化转型</div>
+      </div>
+      <div>
+        <input class="mock-input" placeholder="搜索标题、摘要、标签、精读正文" style="width:100%;margin-bottom:12px" />
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+          <div class="placeholder">最新精读卡片</div>
+          <div class="placeholder">核心观点卡片</div>
+          <div class="placeholder">行动清单卡片</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="approve" onclick="toggleSelect(this)">
+    <div class="letter">✓</div>
+    <div class="content">
+      <h3>这个结构可以</h3>
+      <p>下一步进入设计说明：页面、数据模型、交互和首批内容归属。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="adjust" onclick="toggleSelect(this)">
+    <div class="letter">↻</div>
+    <div class="content">
+      <h3>还要调整</h3>
+      <p>可以告诉我更想加强“大气展示”、还是加强“检索工作台”。</p>
+    </div>
+  </div>
+</div>
